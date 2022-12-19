@@ -512,7 +512,7 @@ aside .insta .ins-imgs img {
     padding-inline: 30px;
     border-radius: 20px;
     position: absolute;
-    top: calc(100% + 575px);
+    top: calc(100% + 630px);
     left: 200px;
     z-index: 3;
 }
