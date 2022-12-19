@@ -448,7 +448,7 @@ aside .recent-content .content:not(:last-of-type) {
 }
 
 aside .recent-content .image {
-    max-width: 60px;
+    max-width: 64px;
     margin-right: 10px;
 }
 
