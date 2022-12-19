@@ -1,0 +1,580 @@
+/* Css Reset */
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* Lists */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800&display=swap');
+
+
+/* Variables */
+
+:root {
+    /* Neutral Colors */
+    --nuetral-300: #c4c4c4b0;
+    --nuetral-800: #EB1700;
+    --nuetral-color: #00A082;
+
+    /* Fonts  */
+    --ff: 'Poppins', sans-serif;
+
+    /* Font weights */
+    --fw-200: 200;
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+
+}
+
+body {
+    font-family: var(--ff);
+}
+
+.container {
+    padding-inline: 20px;
+    margin: 0 auto;
+}
+
+/* For The Small Screens */
+@media (min-width:768px) {
+    .container {
+        width: 728px;
+    }
+}
+
+/* For the medium Screens */
+@media (min-width:992px) {
+    .container {
+        width: 950px;
+    }
+}
+
+/* For the large Screens */
+@media (min-width:1200px) {
+
+    .container {
+        width: 1160px;
+    }
+}
+
+/* Header start */
+header {
+    background-color: #fff;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    max-width: 65px;
+}
+
+header .links {
+    position: relative;
+}
+
+header .icon {
+    width: 35px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 132px;
+}
+
+header span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--nuetral-800);
+    margin-block: 3px;
+}
+
+@media (min-width:768px) {
+    header .icon {
+        display: none;
+    }
+
+    header .links nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:767px) {
+    header .links nav.nav-content {
+        display: none;
+    }
+
+}
+
+header .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width:767px) {
+    header div.icon:hover~.links>.nav-content {
+        display: flex;
+        flex-direction: column;
+        width: 282%;
+        position: absolute;
+        top: calc(100% + 15px);
+        right: 0;
+        background-color: #eb17002e;
+    }
+
+    header .links .nav-content a {
+        justify-content: flex-start;
+        height: 50px;
+    }
+}
+
+header .links>nav>li>a {
+    position: relative;
+    text-transform: uppercase;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    height: 72px;
+    overflow: hidden;
+    font-weight: var(--fw-700);
+
+}
+
+header .links>nav>li>a::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 5px;
+    background-color: var(--nuetral-800);
+    bottom: 0;
+    left: -50%;
+    transition: .5s linear;
+}
+
+header .links>nav>li>a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    transition: .5s linear;
+}
+
+header .links li.active a,
+header .links nav li:hover>a {
+    color: var(--nuetral-800);
+}
+
+header .links>nav>li:hover>a::before {
+    left: 0;
+}
+
+header .links>nav>li:hover>a::after {
+    background-color: #eb17002e;
+}
+
+header .links button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: var(--nuetral-800);
+    margin-left: 20px;
+}
+
+header .links button a {
+    color: black;
+    font-weight: 600;
+}
+
+/* End Header */
+/* Menu */
+.main-content {
+    padding-block: 60px;
+}
+
+.main-content .container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-bottom: 20px;
+}
+
+.main-content .meal {
+    background-color: #eee;
+    margin: 0 15px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+.main-content .meal .image {
+    max-width: 158px;
+}
+
+.main-content .meal .image img {
+    border-radius: 10px 0 0 0;
+}
+
+.main-content .meal .text {
+    padding: 10px;
+    width: 320px;
+}
+
+.main-content .meal .text h4 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.main-content .text i {
+    color: var(--nuetral-800);
+    margin-inline: 5px;
+    font-size: 13px;
+}
+
+.main-content .meal .text span a {
+    color: black;
+}
+
+.main-content .meal .text p {
+    color: #1d1d1d96;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+.main-content .meal button {
+    margin-top: 10px;
+    border: none;
+    font-size: 11px;
+    color: var(--nuetral-800);
+    text-transform: capitalize;
+}
+
+.main-content .bulles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-content .bulles li,
+.main-content .bulles i {
+    margin-inline: 2px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #1d1d1d96;
+    color: #1d1d1d96;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main-content .bulles li.active {
+    background-color: var(--nuetral-800);
+    color: #fff;
+    border: none;
+}
+
+.main-content .bulles i {
+    padding-top: 4px;
+}
+
+/* Main content End */
+
+/* Aside */
+
+aside .inp {
+    position: relative;
+}
+
+aside .inp input {
+    max-width: 190px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 1px solid #1d1d1d96;
+}
+
+aside .inp i.search-icon {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+}
+
+aside .categories {
+    margin-left: 10px;
+    margin-block: 15px;
+}
+
+aside h5 {
+    font-size: 15px;
+    margin-block: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1d1d1d96;
+    letter-spacing: 1px;
+}
+
+aside .categories .category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside a,
+aside .categories p {
+    display: block;
+    color: #1d1d1d96;
+}
+
+aside .categories a i {
+    color: #1d1d1d96;
+    margin-right: 10px;
+}
+
+aside .recent-content {
+    margin: 30px 0 15px 10px;
+}
+
+
+aside .recent-content .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    width: 190px;
+}
+
+aside .recent-content .content:not(:last-of-type) {
+    border-bottom: 1px solid #1d1d1d33;
+}
+
+aside .recent-content .image {
+    max-width: 60px;
+    margin-right: 10px;
+}
+
+aside .recent-content img {
+    border-top-left-radius: 10px;
+}
+
+aside .recent-content .text {
+    max-width: 207px;
+}
+
+aside .recent-content .text h6 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000c4;
+}
+
+aside .recent-content .text span a,
+aside .recent-content span {
+    display: inline-block;
+    color: var(--nuetral-300);
+    font-size: 10px;
+}
+
+aside .adds {
+    margin-left: 10px;
+}
+
+aside .adds .image {
+    max-width: 190px;
+    margin: 0 auto;
+}
+
+aside .adds img {
+    margin: 0 auto;
+}
+
+aside .insta {
+    margin: 15px 10px;
+}
+
+aside .insta .ins-imgs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 4px;
+}
+
+aside .insta .ins-imgs img {
+    border-radius: 6px;
+}
+
+/* Aside End */
+
+/* Newsletter */
+.letter .container .letter-content {
+    background-color: var(--nuetral-800);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 710px;
+    padding-inline: 30px;
+    border-radius: 20px;
+    position: absolute;
+    top: calc(100% + 575px);
+    left: 200px;
+    z-index: 3;
+}
+
+.letter .text {
+    margin-right: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+.letter .text h4 {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    word-spacing: -2px;
+}
+
+.letter p {
+    margin-block: 10px;
+    max-width: 330px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.letter .input {
+    position: relative;
+    width: 260px;
+}
+
+.letter .input input[type="email"] {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding-left: 10px;
+    background-color: var(--nuetral-800);
+    caret-color: #fff;
+
+}
+
+.letter .input input[type="submit"] {
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 3px 13px;
+    border-radius: 15px;
+    color: var(--nuetral-800);
+    font-weight: 700;
+}
+
+.letter .input input[type="email"]::placeholder {
+    color: #fff;
+}
+
+.letter .input input[type="email"]:focus {
+    outline: none;
+}
+
+/* The Footer */
+footer {
+    background-color: #000000f2;
+    position: relative;
+    height: 90px;
+}

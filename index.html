@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>HAIL's Food</title>
+</head>
+
+<body>
+  <!-- The Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/hails-food-website-favicon-color.png" alt="Hail's Food logo">
+      </div>
+      <div class="icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="links">
+        <nav class="nav-content">
+          <li class="active"><a href="">Home</a></li>
+          <li><a href="menu.html">Services</a> </li>
+          <li> <a href="#">our values</a> </li>
+          <li><a href="#">About</a></li>
+        </nav>
+        <button><a href="#">Sign up</a></button>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+  <!-- The landing Section -->
+  <div class="landing">
+    <div class="container">
+      <div class="intro-text">
+        <h2>How can We serve You?</h2>
+        <p>We bring trainers, formers the meals and bbeverages that can made everyday moments more enjoyable.</p>
+      </div>
+      <div id="slider">
+        <div class="slides">
+          <img src="images/img5 (1).jpg" alt="">
+        </div>
+        <div class="slides">
+          <img src="images/img5 (2).jpg" alt="">
+        </div>
+        <div class="slides">
+          <img src="images/img1.jpg" alt="">
+        </div>
+        <div class="slides">
+          <img src="images/img2.jpg" alt="">
+        </div>
+        <div class="slides">
+          <img src="images/img3.jpg" alt="">
+        </div>
+        <div class="slides">
+          <img src="images/img4.jpg" alt="">
+        </div>
+      </div>
+      <div id="dot">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+  <!-- Landing End -->
+  <!-- information Section -->
+  <div class="info">
+    <div class="container">
+      <div class="box">
+        <div class="box-img">
+          <img src="images/python.jpg" alt="">
+        </div>
+        <div class="box-text">
+          <h3>We are only as strong as the communities we serve</h3>
+          <p>We're proud to work with formers, trainersto help build a better shining future.</p>
+          <button>Explore</button>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-img">
+          <img src="images/health.jpg" alt="">
+        </div>
+        <div class="box-text">
+          <h3>The world is chainging so are we</h3>
+          <p>
+            Start eating healthy food and build new lifestyle,The HAIL's Food is doing the best to provide you healthy
+            food.
+          </p>
+          <button>Explore</button>
+        </div>
+      </div>
+      <div class="box">
+
+        <div class="b-img">
+          <h3>Who We are?</h3>
+          <div class="image">
+            <img src="images/hails-food-high-resolution-color-logo.png" alt="" srcset="">
+          </div>
+        </div>
+        <button class="btn">read more</button>
+      </div>
+      <div class="box">
+        <div class="text">
+          <h3>Any Questions? call & <br>
+            talk to us today</h3>
+          <button>contact us</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var index = 0;
+    var slides = document.querySelectorAll(".slides");
+    var dot = document.querySelectorAll(".dot");
+
+    function changeSlide() {
+
+      if (index < 0) {
+        index = slides.length - 1;
+      }
+
+      if (index > slides.length - 1) {
+        index = 0;
+      }
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dot[i].classList.remove("active");
+      }
+
+      slides[index].style.display = "block";
+      dot[index].classList.add("active");
+
+      index++;
+
+      setTimeout(changeSlide, 2000);
+
+    }
+
+    changeSlide();
+  </script>
+</body>
+
+</html>
