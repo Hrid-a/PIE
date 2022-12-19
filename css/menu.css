@@ -503,6 +503,11 @@ aside .insta .ins-imgs img {
 /* Aside End */
 
 /* Newsletter */
+.letter {
+    position: relative;
+    height: 85px;
+}
+
 .letter .container .letter-content {
     background-color: var(--nuetral-800);
     display: flex;
@@ -512,8 +517,8 @@ aside .insta .ins-imgs img {
     padding-inline: 30px;
     border-radius: 20px;
     position: absolute;
-    top: calc(100% + 630px);
-    left: 200px;
+    top: 35px;
+    left: 325px;
     z-index: 3;
 }
 
