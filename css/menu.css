@@ -513,12 +513,12 @@ aside .insta .ins-imgs img {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 710px;
+    max-width: 50%;
     padding-inline: 30px;
     border-radius: 20px;
     position: absolute;
     top: 35px;
-    left: 325px;
+    left: 30%;
     z-index: 3;
 }
 

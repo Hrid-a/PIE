@@ -300,7 +300,12 @@ header .links button a {
     color: black;
     font-weight: 600;
 }
-
+header .links button:hover {
+    background-color: var(--nuetral-800);
+}
+header .links button:hover a {
+    color: #fff;
+}
 /* End Header */
 /* The landing section */
 .landing {
@@ -320,7 +325,7 @@ header .links button a {
 }
 
 .landing .container {
-    padding-top: 75px;
+    padding-top: 175px;
     height: calc(100vh - 75px);
     display: flex;
     justify-content: center;
@@ -328,13 +333,8 @@ header .links button a {
 
 @media (max-width:767px) {
     .landing .container {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .landing .intro-text {
-        /* width: 100%; */
+        display: block;
+        padding-top: 80px;
     }
 }
 
@@ -364,7 +364,20 @@ header .links button a {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+@media (max-width:767px) {
+    .landing .intro-text {
+        text-align: justify;
+        margin-left: 32px;
+    }
 
+    .landing .intro-text p {
+        width: 100%;
+    }
+    .landing #slider {
+        margin-top: 70px;
+        margin-left: 24px;
+    }
+}
 .landing #slider .slides {
     overflow: hidden;
     animation-name: fade;
@@ -380,14 +393,7 @@ header .links button a {
     text-align: center;
     position: absolute;
     bottom: 20%;
-    left: 60%;
-}
-
-@media (max-width:767px) {
-    .landing #dot {
-        bottom: 0;
-        left: 25%;
-    }
+    left: 57%;
 }
 
 .landing .dot {
@@ -402,11 +408,54 @@ header .links button a {
     background: var(--primary-main-color);
 }
 
+.landing button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: var(--primary-main-color);
+    margin-left: 20px;
+    height: 30px;
+    position: fixed;
+    BOTTOM: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s;
+}
+.landing button:hover {
+    color: #fff;
+    background-color: var(--nuetral-800);
+}
+@media (max-width:767px) {
+    .landing #dot {
+        bottom: 85px;
+        left: 28%;
+    }
+
+    .landing button {
+        left: 45%;
+    }
+}
+
 /* Landing End */
 .info {
     padding-block: 70px;
 }
-
+@media (max-width:767px) {
+    .info {
+        position: relative;
+    }
+    .info::before {
+        content: '';
+    width: 80%;
+    height: 1px;
+    background-color: var(--nuetral-300);
+    position: absolute;
+    top: -3px;
+    left: 10%;;
+    }
+}
 .info .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -431,9 +480,12 @@ header .links button a {
 @media (max-width:767px) {
     .info .box {
         flex-direction: column;
+        align-items: center;
     }
 }
-
+.info .box-img {
+    max-width: 165px;
+}
 .info .box img {
     border-radius: 10px;
 }
@@ -460,6 +512,10 @@ header .links button a {
     text-transform: capitalize;
 }
 
+/* .info .box button:hover {
+    background-color: var(--nuetral-800);
+    color: #fff;
+} */
 .info .box .b-img h3 {
     font-size: 35px;
     text-align: center;
@@ -503,7 +559,7 @@ header .links button a {
 
     0%,
     100% {
-        top: 0px;
+        top: 10px;
     }
 
     50% {
