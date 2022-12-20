@@ -782,9 +782,21 @@ footer .btn button:hover a {
 }
 
 footer .foot {
+    padding-top: 30px;
     display: flex;
     justify-content: space-evenly;
-    margin-block: 20px;
+    margin-block: 55px;
+    position: relative;
+}
+
+footer .foot::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--nuetral-300);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 @media (max-width:767px) {
@@ -814,9 +826,6 @@ footer nav li a {
     text-transform: capitalize;
 }
 
-footer .foot {
-    margin-block: 50px;
-}
 
 footer .foot nav {
     display: flex;
