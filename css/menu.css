@@ -297,6 +297,10 @@ header .links button a {
     margin-bottom: 20px;
 }
 
+.main-content .container .menu-content {
+    margin-right: 40px;
+}
+
 .main-content .meal {
     background-color: #eee;
     margin: 0 15px 10px 0;
@@ -503,7 +507,8 @@ aside .insta .ins-imgs img {
 /* Aside End */
 
 /* Newsletter */
-.letter {
+
+.letter .container {
     position: relative;
     height: 85px;
 }
@@ -513,12 +518,12 @@ aside .insta .ins-imgs img {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 50%;
+    max-width: 100%;
     padding-inline: 30px;
     border-radius: 20px;
     position: absolute;
     top: 35px;
-    left: 30%;
+    left: 20%;
     z-index: 3;
 }
 
